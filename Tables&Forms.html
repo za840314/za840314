@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <title> Tables and Forms CIS4004 </title>
+    <h1> Pizza Ordering Form </h1>
+    <h3> Contact Information </h3>
+
+    <label for="inName">Name: </label>
+    <input type="text" name="inName" id="inName"><br>
+    <label for="inPhone">Phone: </label>
+    <input type="text" name="inPhone" id="inPhone"><br>
+    <label for="inEmail">Email: </label>
+    <input type="text" name="inEmail" id="inEmail"><br>
+
+    <h3> Select Pizza Size </h3>
+    <label for="inPSize">Pizza Size: </label>
+    <select type="text" name="inPSize" id="inPSize"><br>
+        <option value="">--Select Size--</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+        <opton value="xlarge">XLarge</opton>
+    </select>
+
+    <h3> Select Sauce </h3>
+    <label>
+        <input type="radio" name="sauce" value="marinara" required> Marinara
+    </label>
+    <label>
+        <input type="radio" name="sauce" value="ranch"> Ranch
+    </label>
+    <label>
+        <input type="radio" name="sauce" value="no-sauce"> No Sauce
+    </label>
+
+    <h3> Select Toppings </h3>
+    <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label>
+    <label><input type="checkbox" name="toppings" value="sausage"> Sausage</label>
+    <label><input type="checkbox" name="toppings" value="mushroom"> Mushroom</label>
+    <label><input type="checkbox" name="toppings" value="peppers"> Peppers</label>
+    <label><input type="checkbox" name="toppings" value="onions"> Onions</label>
+    <label><input type="checkbox" name="toppings" value="pineapple"> Pineapple</label>
+    <label><input type="checkbox" name="toppings" value="olives"> Olives</label>
+
+    <h3> Additional Instructions </h3>
+    <textarea name="instructions" rows="4" placeholder="Add instructions"></textarea><br>
+    <button type="submit">Submit</button>
+    <p></p>
+
+    <table>
+        <caption>My Favorite Games</caption>
+        <thead>
+            <tr>
+                <th>Developer</th>
+                <th>Title</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">Bungie</td>
+                <td>Halo</td>
+                <td>2001</td>
+            </tr>
+            <tr>
+                <td>Halo 2</td>
+                <td>2004</td>
+            </tr>
+            <tr>
+                <td>Halo 3</td>
+                <td>2007</td>
+            </tr>
+            <tr>
+                <td>Mojang</td>
+                <td colspan="2">Minecraft 2011</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:center; font-weight:bold;">Count: 4</td>
+            </tr>
+        </tbody>
+    </table>
+</html>
