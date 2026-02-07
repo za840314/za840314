@@ -1,0 +1,234 @@
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Jump Menu - fixed left sidebar, full height */
+#jumpMenu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 18%;               
+    background-color: #fdf6e3;
+    border-right: 2px solid #d1b48c;
+    padding: 20px 15px;
+    overflow-y: auto;
+}
+
+#jumpMenu h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    color: #5d4037;
+    text-align: center;
+}
+
+#jumpMenu a {
+    display: block;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.15s;
+}
+
+#jumpMenu a:hover {
+    background-color: #e8dab2;
+    color: #1a2a3a;
+}
+
+/* Header - fixed at top, starts after jump menu */
+header {
+    position: fixed;
+    top: 0;
+    left: 18%;              
+    right: 0;
+    height: 90px;
+    background: linear-gradient(to right, #c0392b, #e74c3c);
+    color: white;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+header p {
+    font-size: 2.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+}
+
+header button {
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 8px 18px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+header button:hover {
+    background-color: rgba(255,255,255,0.3);
+    transform: translateY(-1px);
+}
+
+/* Main content area */
+main {
+    margin-left: 18%;           /* same as jump menu */
+    padding-top: 110px;         /* space for fixed header */
+    padding-bottom: 100px;      /* space for thank-you box */
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin: 25px 0 35px;
+    color: #2c3e50;
+    font-size: 2.4rem;
+}
+
+/* Articles container - responsive grid */
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px 24px;
+    padding: 0 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+article {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    overflow: hidden;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+
+article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+article h2 {
+    background: #34495e;
+    color: white;
+    padding: 14px 18px;
+    font-size: 1.35rem;
+    margin: 0;
+}
+
+article p {
+    padding: 18px 20px;
+    margin: 0;
+}
+
+article p:last-of-type {
+    text-align: right;
+    padding-bottom: 16px;
+}
+
+article a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* Thank you box - fixed bottom right */
+#thanks {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    background: #2ecc71;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 800;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px 20px;
+    color: #555;
+    border-top: 1px solid #ddd;
+    margin-top: 60px;
+}
+
+footer address {
+    font-style: normal;
+    line-height: 1.8;
+}
+
+/* Small screens adjustment */
+@media (max-width: 900px) {
+    #jumpMenu {
+        width: 220px;          /* fixed px on small screens */
+    }
+
+    header {
+        left: 220px;
+    }
+
+    main {
+        margin-left: 220px;
+    }
+
+    #container {
+        padding: 0 15px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        height: 110px;
+        padding: 10px 0;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #jumpMenu {
+        width: 180px;
+    }
+
+    header {
+        left: 180px;
+    }
+
+    main {
+        margin-left: 180px;
+    }
+}
